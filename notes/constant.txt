@@ -1,0 +1,78 @@
+literals-
+They are used to express particular values within the source code of a program. 
+int a =5;
+5 is the literal constant in the code
+Literal constants can be classified into: 
+integer, floating-point, characters, strings, Boolean, pointers, and user-defined literals.
+
+integer literals:
+int are not enclosed within quotes
+c++ allows decimal (normal we use), octal (base 8) , hexadecimal(base 16)
+75         // decimal       
+0113       // octal     preceded with a 0(0)
+0x4b       // hexadecimal   preceded with 0x
+
+they have the type int 
+but we can also have more specific type that is unsigned,long ,long long
+75         // int
+75u        // unsigned int
+75l        // long
+75ul       // unsigned long 
+75lu       // unsigned long 
+suffixes are present,it can be uppercase or lowercase also
+
+floating literals :
+they express real values with decimals and/or exponents
+3.14159    // 3.14159
+6.02e23    // 6.02 x 10^23  (can be read as that expresses "by ten at the Xth height", where X is an integer value that follows the e character)
+1.6e-19    // 1.6 x 10^-19
+3.0        // 3.0  
+
+this can also have types that is float or long double
+suffix is f/F or l/L
+
+character string literals
+they need to be enclosed within quotes
+character is single character enclosed within single quotes
+string can be of several characters enclosed within double quotes
+
+Character and string literals can also represent special characters that 
+are difficult or impossible to express otherwise in the source code of a program, 
+like newline (\n) or tab (\t). These special characters are all of them preceded by a 
+backslash character (\).
+
+Here you have a list of the single character escape codes:
+
+Escape code	Description
+\n	newline
+\r	carriage return
+\t	tab
+\v	vertical tab
+\b	backspace
+\f	form feed (page feed)
+\a	alert (beep)
+\'	single quote (')
+\"	double quote (")
+\?	question mark (?)
+\\	backslash (\)   backslash (\) at the end of line is
+                    considered a line-continuation character that merges both that line and the next into a single line
+
+we have character type also 
+            suffix
+char16_t    u
+char32_t    U
+wchar_T     L
+
+other literals we have are True,false,nullptr
+
+we can also use constant keyword(const) to assign a  constant value
+const char tab = 't'
+const int a =5
+
+another way to define some constants is using preprocessor definition (#define)
+
+#define Pi 3.14
+#define newline '\n'
+
+preprocessor directives hence no need of semicolon at the end
+

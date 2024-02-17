@@ -1,0 +1,8 @@
+Fundamental and Compound datatypes
+
+Fundamental are basic datatypes that are inbuilt
+we have character , integer , float , boolean
+
+for Compound datatypes we have to include the header file <string> for using and declaring string objects and functions
+Compound we have string
+

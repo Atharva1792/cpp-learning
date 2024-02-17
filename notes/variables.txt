@@ -1,0 +1,44 @@
+Variables portion of memory to store values.
+Each variable needs a name that can be used to access the value it stores
+the name needs to be a valid identifier
+
+valid identifier is the one containing - letters, digits or underscore(_)
+
+rest all characters like special symbols, punctuations, blank spaces are invalid
+identifier cannot begin with a digit
+
+also identifier must not match with any keywords
+
+keywords in c++ are for data descriptions or various operations
+
+keywords - 
+alignas, alignof, and, and_eq, asm, auto, bitand, bitor, bool, break, case, 
+catch, char, char16_t, char32_t, class, compl, const, constexpr, const_cast, 
+continue, decltype, default, delete, do, double, dynamic_cast, else, enum, 
+explicit, export, extern, false, float, for, friend, goto, if, inline, int, 
+long, mutable, namespace, new, noexcept, not, not_eq, nullptr, operator, or, 
+or_eq, private, protected, public, register, reinterpret_cast, return, short, 
+signed, sizeof, static, static_assert, static_cast, struct, switch, template, 
+this, thread_local, throw, true, try, typedef, typeid, typename, union, 
+unsigned, using, virtual, void, volatile, wchar_t, while, xor, xor_eq
+
+there may be more keywords also
+
+C++ is case sensitive
+
+
+Variables are stored in unspecified memory locations 
+
+C++ requires every variable to be declared with its type so that it informs the compiler the size
+to reserve in memory for the variable.
+
+Initialization -
+assigning value to variable when we declare 
+3 ways to initialize a variable
+c-like : int a = 5; (type identifier = value)
+constructor : int a(5); (type identifier(value))
+uniform : int a{5}; (type identifier{value})
+
+type deduction - 
+compiler can deduct the type of variable based on other other variable using 'auto'(with Initialization) or 'decltype'(for without Initialization)
+
