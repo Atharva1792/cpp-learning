@@ -6,3 +6,24 @@ we have character , integer , float , boolean
 for Compound datatypes we have to include the header file <string> for using and declaring string objects and functions
 Compound we have string
 
+Types of datatypes - 
+--primitive/built-in
+--derived
+--user defined
+
+1. Primitive Data Types: These data types are built-in or predefined data types and can be used directly 
+by the user to declare variables. example: int, char, float, bool, etc.
+
+2. Derived Data Types: Derived data types that are derived from the primitive or built-in 
+datatypes are referred to as Derived Data Types. These can be of four types namely: 
+Function
+Array
+Pointer
+
+3. Abstract or User-Defined Data Types: Abstract or User-Defined data types are defined by the user itself. Like, defining a class in C++ or a structure. C++ provides the following user-defined datatypes:  
+
+Class
+Structure
+Union
+Enumeration
+Typedef defined Datatype

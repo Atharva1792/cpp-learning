@@ -42,3 +42,4 @@ uniform : int a{5}; (type identifier{value})
 type deduction - 
 compiler can deduct the type of variable based on other other variable using 'auto'(with Initialization) or 'decltype'(for without Initialization)
 
+Static Variables-
