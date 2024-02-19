@@ -43,3 +43,5 @@ type deduction -
 compiler can deduct the type of variable based on other other variable using 'auto'(with Initialization) or 'decltype'(for without Initialization)
 
 Static Variables-
+when a variable is defined static , its space is allocated for the lifetime of the program.
+Its information will be present and used/ modified and the change will also be reflected in the memory.

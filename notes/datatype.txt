@@ -27,3 +27,13 @@ Structure
 Union
 Enumeration
 Typedef defined Datatype
+
+Union - all data members share the same memory location.
+That is when one data members value is changed then the change will be done to all the data members 
+present in that union's definition.
+
+Enumeration - used to assign name to integral constants.
+
+Typedef - explicitly define new datatype with the type present in the standard C++.
+
+syntax - typedef datatype name;
