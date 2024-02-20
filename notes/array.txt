@@ -1,0 +1,15 @@
+An array is a series of elements of the same type placed in contiguous memory locations 
+that can be individually referenced by adding an index to a unique identifier.
+
+type name [length];  --length must be constant expression
+
+initialize arrays using ({})curly braces
+
+int arr[5] = {1,2,3,4,5};
+can initialize empty also or with less elements than the size specified
+
+when initializing we can leave [] empty ,it will automatically get the array size
+
+#include<array>
+this has some in built functions, only declaration is different
+array <type,size> array_name {};

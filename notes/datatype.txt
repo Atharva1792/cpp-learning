@@ -37,3 +37,52 @@ Enumeration - used to assign name to integral constants.
 Typedef - explicitly define new datatype with the type present in the standard C++.
 
 syntax - typedef datatype name;
+
+
+Type modifiers- used to give more information about the datatype so that it can be used according to the situations
+signed (default) - negative to positive     (char,int)
+unsigned - only 0 and positive              (char,int)
+short - takes less memory space             (int)
+long - takes more memory space              (int,double)
+
+signed/unsigned can be combined with short/long
+long can be used twice i.e (long long int num;)
+
+Type Qualifier -
+it will provide more information about the value
+const - if a variable declared const (constant) then its value can not be changed during execution
+volatile - it means the value can be changed in many ways
+restrict - when a pointer is declared with restrict,The object restricts links that can only initially be 
+           accessed via a pointer qualified by it.
+
+Type Conversion / TypeCast-
+2 types-
+Implicit and explicit
+
+Implicit- (Automatic type conversion)
+it is done by compiler without any trigger from user
+it takes place when more than one datatype is present in an expression/Statement
+All the data types of the variables are upgraded to the data type of the variable with largest data type.
+
+bool -> char -> short int -> int -> 
+
+unsigned int -> long -> unsigned -> 
+
+long long -> float -> double -> long double
+
+Explicit - This one is known as typecasting and is user defined
+2 ways - 
+by assignment-
+syntax - (type) expression;
+by using cast operator
+1) static_cast (compile time conversion)
+    syntax - static_cast<type> (expression)
+2) dynamic_cast (mainly used for downcast)converting a pointer of a base class to derived class
+    syntax - dynamic_cast<type> (expression)
+3) const_cast -to use for changing type of const or volatile (so we can modify the variables that are declared const)
+    syntax - const_cast<type> (expression)
+4) reinterpret_cast - to change the pointer type (int* to char* to void*) or such changes
+    syntax - reinterpret_cast<type> (expression)
+
+
+TO CHECK TYPE - typeid(var_name)

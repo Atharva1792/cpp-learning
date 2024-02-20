@@ -1,0 +1,43 @@
+Assignment operator - (=)
+
+Arithmetic - 
++,-,*,/,%(modulo-gives remainder of the division of 2 values)
+
+Compound - 
+a+=b ---> a = a +b
+-= , *= , /= , %= , >>= , <<= , &= , ^= , |=
+
+increment decrement - (add subtract by 1 )
+++ , --
+it can be used as prefix(pre-increment:x++) or suffix(post-increment:++x)
+using as prefix - the value is increased first and then expression is evaluated
+using as postfix - the value is increased later that is the expression is evaluated first and then the value is updated
+
+
+Relational and Comparison -
+== Equal to,
+!= not Equal to
+< less than
+> greater than
+>= greater than or equal to
+<= less than or equal to 
+these all are used to compare between 2 values
+
+logical-
+! NOT  (inverts the output, if output is true then using ! will print false)
+&& AND (like truth table values,true true->true,true false->false)
+|| OR   (like truth table values,only one true -> true )
+
+Conditional Ternary operator - (?)
+condition ? result1:result2
+can be used instead of if else
+
+bitwise operator
+& bitwise and
+| bitwise inclusive or
+^ bitwise exclusive xor
+~ NOT (Unary complement)
+<< shift bits left
+>> shift bits right
+
+sizeof() - returns the space it(variable or datatype) takes that is in bytes 

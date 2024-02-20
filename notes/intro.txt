@@ -1,0 +1,29 @@
+found in 1983 by Bjarne Stroustrup at bell labs
+enhancement of c to include object oriented
+high level,general purpose
+support low level,system programming which makes it suitable for-
+developing operating systems
+device drivers 
+other system softwares
+
+It has -
+Object Oriented 
+Templates
+STL 
+Exception Handling(Robust) - hence easier to handle error and unexpected situations
+
+C++ executes line by line
+It generates a instruction pointer(IP) which contains all the instructions in such a way that machine 
+can understand and it is executed line by line.
+
+Features - 
+Object-Oriented Programming
+Machine Independent
+Simple
+High-Level Language
+Popular
+Case-sensitive
+Compiler Based
+Dynamic Memory Allocation
+Memory Management
+Multi-threading

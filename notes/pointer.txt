@@ -1,0 +1,32 @@
+The reference and dereference operators are thus complementary:
+& is the address-of operator, and can be read simply as "address of"
+* is the dereference operator, and can be read as "value pointed to by"
+
+Thus, they have sort of opposite meanings: An address obtained with & can be dereferenced with *.
+
+Pointer Arithmetic-
+Only Addition and Subtraction in pointers
+
+increment in pointer is , it adds the size in bytes to the address
+suppose we have , char*,int*,long*(storing address - 1000,2000,3000)
+and we do ++ increment on them
+then-
+char is updated by 1 byte address becomes 1001
+int is updated by 2 byte , 2002
+long is updated by 4 byte,3004
+
+applicable for both increment and decrement(addition and Subtraction)
+
+using with dereference(*) the value is incremented (*p++)
+
+we can also use 'const' to not modify the pointers(pointed value can be read,but not modifiable)
+
+non-const pointers can point to const int(values/types)
+pointers to const are not convertible to pointers to non const
+
+ex-
+int x;
+      int *       p1 = &x;  // non-const pointer to non-const int
+const int *       p2 = &x;  // non-const pointer to const int
+      int * const p3 = &x;  // const pointer to non-const int
+const int * const p4 = &x;  // const pointer to const int 

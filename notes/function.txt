@@ -1,0 +1,88 @@
+It helps in performing individual tasks.
+It can called from some point of the program to do that task created in the function.
+
+syntax -
+type name(parameter1 , parameter2 ...){
+    block of code
+}
+
+type - type of the value to be returned by the function
+name - identifier for the function that we want to call by
+parameter - as many as are needed and need to be given as normal declarations we do(int x,int y)
+
+return type is very important for functions it should always have proper return type
+in case of 'main' function it takes 'return 0;' always whether implicitly or explicitly
+it shows that the program has executed successfully.
+
+Arguments passing - when calling function, the parameter we define ,when we call the function we need to 
+pass same type parameters(also called arguments)
+
+arguments can be passed in 2 ways:
+by value and by reference
+
+by value are what we normally use-- 
+example: addition function need 2 values
+addition(int x,int y);
+so we either pass direct value - addition(2,3);
+or through variable (int x=2,y=3; addition(x,y))
+this are arguments passed by value
+so when we pass by value ,only the values are passed that is any change 
+outside the function will not occur(to variable x and y)
+
+When we pass by reference i.e int addition(int& a,int& b);
+addition (x,y);
+then the variable x and y are passed and any change inside the function happening to a and b will 
+on x and y also in main function;
+
+-- BY VALUE creates copy of the value
+-- BY REFERENCE it does not create copy of the data instead uses them only or the pointer where it is stored
+
+For very short functions we can avoid to process of calling the usual function call and only insert 
+the part of code of function where it is called , we can use 'inline' specifier while declaring function.
+
+inline int addition(int x,int y){
+    return x+y;
+}
+
+But this is not necessary because C++ compilers already focus on optimizing the code.
+
+Function declaration--
+To use function in main function and write the function later we can declare function first above main 
+and define function later in the program.
+
+to declare ,same as defining ,just end with a semicolon(;)
+
+
+FUNCTION OVERLOADING--
+
+Overloaded Functions - Two functions with same name
+Two functions can have same name as long as there is difference in their parameters
+no. of parameter can be different
+or the type of parameter can be different
+If there are any changes in parameter for 2 same function name then they are overloaded functions
+
+int add(int a,int b){return a+b;};
+double add(double a,double b){return a+b;};  example of overloaded function
+functionality could be same or different also.
+but the parameter type should be different
+
+Function template--
+we can define function with generic type and when we call them we can initiate the function with the 
+type we want
+for that we can define a function template
+this way we can avoid function overloading (if all same function name are doing same task)
+
+to define a template :
+template <template parameter> function declaration
+
+example - 
+template <class someType>
+someType sum(someType a,someType b)
+{
+    return a + b;
+}
+
+we can call this template as :
+int res = sum<int>(10,20);
+it will automatically do someType as int for performing this call.
+

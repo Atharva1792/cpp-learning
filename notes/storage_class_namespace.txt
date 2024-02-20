@@ -1,0 +1,28 @@
+Namespace - 
+scope where we can define data members that can be accessed anywhere in the program
+using the scope operator(::).
+This is done to avoid name collisions
+
+namespace name{
+    int a;
+    int b;
+}
+
+we can access it anywhere in the code by: 
+name::a; name::b;
+
+Using keyword- 
+using includes the name in the present block of code 
+using name::a;
+then we dont need to use name:: again for accessing a;
+
+or we can using namespace name;
+then we dont need to use :: 
+
+STORAGE CLASSES-
+storage for global or namespace scope is allocated throughout the program and this is called static storage
+also automatic storage is generated for local variables (within block code) only available during that block.
+
+static storage variable that are not initialized are automatically initialized to zero.
+whereas automatic storage variable(local) that are not initialized are left uninitialized 
+and give random value(undetermined value)
