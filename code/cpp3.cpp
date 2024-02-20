@@ -1,6 +1,6 @@
 // C++ program to Demonstrate the sizes of data types
 #include <iostream>
-#include <limits.h>
+#include <limits.h> //marcos constants are CHAR_MIN,INT_MAX etc that help in knowing the maximum and minimum value a type can store
 using namespace std;
 
 int main()
