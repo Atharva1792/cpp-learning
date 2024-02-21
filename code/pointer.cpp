@@ -2,21 +2,73 @@
 
 using namespace std;
 
-/*int main(){
+char ch1 = 'a', ch2 = 'b';
+char ch3[4] = {'c', 'd', 'e', 'f'};
+char *ptr[3];
+
+int *ptr1;
+
+int arr[3] = {5, 12, 31};
+int *ptr10 = new int[3];
+
+int **ptr4;
+int *ptr5;
+int in = 10;
+
+int **ptr6;
+
+int ***ptr7;
+
+int *sum(int *i, int *j);
+
+int *sum(int *i, int *j)
+{
+    int *result = new int;
+
+    *result = *i + *j;
+
+    return result; // it is equivalent to (int *unnamed = result) since new keyword is used we created memory space for it
+}
+
+int sum1(int a, int b)
+{
+    return a + b;
+}
+
+int (*ptr_sum)(int, int) = &sum1; // ptr_sum is a pointer which pointing to function 
+                                // "sum" which takes 2 ints as argument and returns an int.
+
+void increment_all(int *start, int *stop)
+{
+    int *current = start;
+    while (current != stop)
+    {
+        ++(*current); // increment value pointed
+        ++current;    // increment pointer
+    }
+}
+
+void print_all(const int *start, const int *stop)
+{
+    const int *current = start;
+    while (current != stop)
+    {
+        cout << *current << '\n';
+        ++current; // increment pointer
+    }
+}
+
+int main(){
 
     int i= 10;
 
     cout << "The value of variable i = " <<i <<endl;
     cout << "The memory address of i = " <<&i << endl; //hexadecimal format
-    cout << "The value of variable i using * operator = " << *(&i)<<endl; //    The * operator gives the value when provided with a memory address. the datatype is inferred from the variable name. 
+    cout << "The value of variable i using * operator = " << *(&i)<<endl; 
+    //    The * operator gives the value when provided with a memory address. the datatype is inferred from the variable name. 
     
-
-    return 0;
-}*/
-
-/*int main(){
-
-    int i = 10;
+    cout << "\n------------------------\n\n";
+    i = 10;
     int *x = &i;  // x stores address of i
     int *y;
 
@@ -37,15 +89,7 @@ using namespace std;
 
     cout << "The memory allocated to the pointer x is : " << sizeof(x) << " bytes." ; 
     
-    return 0;
-}
-*/
-
-// -----------ARRAY POINTERS-------------
-/*char ch1 = 'a',ch2='b';
-char ch3[4] = { 'c','d','e','f' };
-char *ptr[3];
-int main(){
+    cout<<"\n\n-----------ARRAY POINTERS-------------\n\n";
 
     ptr[0] = &ch1;
     ptr[1] = &ch2;
@@ -57,16 +101,9 @@ int main(){
     *ptr[0] = 'z'; 
     *ptr[1] = 'y'; 
     cout << "Final characters stored in ptr[0] and ptr[1]: " << *ptr[0] <<" "<<*ptr[1]<<endl;
+    cout << "Array accessed through pointer:"<<*ptr[2]<<endl;
 
-    return 0;
-}*/
-
-//-----------Dynamic memory allocation----
-/*
-int i=0;
-int *ptr1;
-
-int main(){
+    cout<<"\n-----------Dynamic memory allocation----\n\n";
 
     ptr1 = new int; // 'new' allocates memory for an unnamed integer.We can freely access the unnamed variable through the pointer
     
@@ -99,91 +136,52 @@ int main(){
     }
 
     delete[ ] ptr1; //free up memory, array size need not be specified.
+    
+    cout<< "\n-----------------Array and Pointer---------------\n\n";
 
-    return 0;
-}*/
-
-// -----------------Array and Pointer---------------
-
-/*int arr[3] = {5,12,31};
-
-int *ptr = new int[3];
-
-int main(){
-    *(ptr+0) = 2; //pointer way
-    ptr[1] = 4; // normal way (array)
-    *(ptr+2) = 6;
+    *(ptr10+0) = 2; //pointer way
+    ptr10[1] = 4; // normal way (array)
+    *(ptr10+2) = 6;
     //same way to access(print) them also 
 
     cout << "arr[0] using array notation = "<< arr[0]<<endl;
     cout << "arr[1] using pointer notation = "<<arr[1]<<endl;
 
-    //accress base address of array that pointer points to
+    //access base address of array that pointer points to
 
     cout << "Base address of array ptr points to: " << ptr <<endl;
 
     // access base address of arr
     cout << "Base address of array arr is : " << arr << endl;
 
-    return 0;
-}*/
+    cout << "------------Multi dimensional Pointer-----\n";
 
+    ptr5 = &in;
+    cout << *ptr5<< endl;
 
-//------------Multi dimensional Pointer-----
-
-/*int **ptr2;
-int *ptr;
-int i=10;
-
-int main(){
-    ptr = &i;
-    cout << *ptr<< endl;
-
-    ptr2 = &ptr; // assigned base address of ptr(pointer itself,not where it points to) to ptr2
+    ptr4 = &ptr5; // assigned base address of ptr(pointer itself,not where it points to) to ptr2
 
     //accessing i in different ways
     cout << "Through i : " << i <<endl;
-    cout << "Through ptr : "<< *ptr << endl;
-    cout << "Through ptr2: "<< **ptr2 << endl;
+    cout << "Through ptr : "<< *ptr5 << endl;
+    cout << "Through ptr2: "<< **ptr4 << endl;
 
-    return 0;
-
-}*/
-
-//---------pointers to return value from functions-----------
-
-/*int* sum(int *i,int *j);
-
-int* sum(int *i,int *j){
-    int *result = new int;
-
-    *result = *i + *j;
-
-    return result; //it is equivalent to (int *unnamed = result) since new keyword is used we created memory space for it
-} 
-
-int main(){
+    cout <<"\n---------pointers to return value from functions-----------\n\n";
+ 
     int p = 10, q =15;
     int *r = sum(&p,&q);    //pointer r stores the base address of the memory allocated with new operator in the function sum.
 
     cout << "The sum is : " << *r << endl;
 
-    return 0;
-
     //since memory is not being deleted with delete,a memory leak is created.
 
-}*/
 
-// -------------Dynamic memory allocation(Multidimensional pointer)
+    cout<< "\n-------------Dynamic memory allocation(Multidimensional pointer)-------\n\n";
 
-
-/*int **ptr;
-
-int main(){
-    ptr = new int *[3]; // ptr stores the base address of an array of three pointers to an int or int array
+    ptr6 = new int *[3]; // ptr stores the base address of an array of three pointers to an int or int array
 
     for (int i=0;i<3;i++){
-        *(ptr+i) = new int[4];
+        *(ptr6+i) = new int[4];
     }
     // this loop can be written as - ptr = new int[3][4]
 
@@ -192,35 +190,28 @@ int main(){
 
     for(int i=0;i<3;i++){
         for(int j=0;j<4;j++){
-            *(*(ptr+i)+j) = i+j; // this means ptr[i][j] = i+j
+            *(*(ptr6+i)+j) = i+j; // this means ptr[i][j] = i+j
         
-            cout << "ptr["<<i<<"]["<<j<<"] = "<<ptr[i][j]<<" ";
+            cout << "ptr["<<i<<"]["<<j<<"] = "<<ptr6[i][j]<<" ";
         }
         cout << endl;
     }
     //free the allocated space, delete must used as much as new is used
 
     for(int i=0;i<3;i++){
-        delete[] *(ptr+i);
+        delete[] *(ptr6+i);
     }
-    delete[] ptr;
+    delete[] ptr6;
 
-    return 0;
-}
-*/
+    cout<<"\n\n---------------3d array pointer-----------\n\n";
 
 
-//---------------3d array pointer
-
-/*int ***ptr;
-
-int main(){
-    ptr = new int **[2]; 
+    ptr7 = new int **[2]; 
 
     for (int i=0;i<2;i++){
-        *(ptr+i) = new int *[3];
+        *(ptr7+i) = new int *[3];
         for(int j=0;j<3;j++){
-            *(*(ptr+i)+j) = new int[4];
+            *(*(ptr7+i)+j) = new int[4];
         }
     }
 
@@ -229,9 +220,9 @@ int main(){
     for(int i=0;i<2;i++){
         for(int j=0;j<3;j++){
             for(int k=0;k<4;k++){
-                *(*(*(ptr+i)+j)+k) = i+j+k; // this means ptr[i][j] = i+j
+                *(*(*(ptr7+i)+j)+k) = i+j+k; // this means ptr[i][j] = i+j
        
-                cout << "ptr["<<i<<"]["<<j<<"]["<<k<<"] ="<<*(*(*(ptr+i)+j)+k)<<" ";
+                cout << "ptr["<<i<<"]["<<j<<"]["<<k<<"] ="<<*(*(*(ptr7+i)+j)+k)<<" ";
             }
         }
         cout << endl;
@@ -240,84 +231,38 @@ int main(){
 
     for(int i=0;i<2;i++){
         for(int j=0;j<3;j++){
-            delete[] *(*(ptr+i)+j);
+            delete[] *(*(ptr7+i)+j);
         }
-        delete[] *(ptr+i);
+        delete[] *(ptr7+i);
     }
-    delete[] ptr;
+    delete[] ptr7;
 
-    return 0;
-}*/
+    cout<< "\n\n-------------function pointers----------\n\n";
 
-// -------------function pointers
-
-/*int sum(int a,int b){
-    return a+b;
-}
-
-int (*ptr_sum)(int,int) = &sum; // ptr_sum is a pointer which pointing to function "sum" which takes 2 ints as argument and returns an int.
-
-int main(){
     int a = 10,b =2;
 
-    if(ptr_sum != &sum)
+    if(ptr_sum != &sum1)
         cout << "Error!";
     int res = (*ptr_sum)(a,b);  //function call through pointer
-    cout <<"Sum is : "<<res;
+    cout <<"Sum is : "<<res<<endl;
 
-    return 0;
+    cout<< "\n\n------------using typedef-----------\n\n";
 
-}*/
+    typedef int (*ptr_sum_type)(int,int); 
+    int a1 = 10,b1 =2;
+
+    ptr_sum_type ptr_sum = &sum1;
+
+    int res1 = (*ptr_sum)(a1,b1);  //function call through pointer
+    cout <<"Sum is : "<<res1<<endl;
 
 
+    cout<<"\n\n---------pointers as arguments-----------\n\n";
 
-// using typedef
-
-
-/*int sum(int a,int b){
-    return a+b;
-}
-
-typedef int (*ptr_sum_type)(int,int); 
-
-int main(){
-    int a = 10,b =2;
-
-    ptr_sum_type ptr_sum = &sum;
-
-    int res = (*ptr_sum)(a,b);  //function call through pointer
-    cout <<"Sum is : "<<res;
-
-    return 0;
-
-}*/
-
-// pointers as arguments:
-
-void increment_all(int *start, int *stop)
-{
-    int *current = start;
-    while (current != stop)
-    {
-        ++(*current); // increment value pointed
-        ++current;    // increment pointer
-    }
-}
-
-void print_all(const int *start, const int *stop)
-{
-    const int *current = start;
-    while (current != stop)
-    {
-        cout << *current << '\n';
-        ++current; // increment pointer
-    }
-}
-
-int main()
-{
     int numbers[] = {10, 20, 30};
     increment_all(numbers, numbers + 3);
     print_all(numbers, numbers + 3);
+
+
     return 0;
 }

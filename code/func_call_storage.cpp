@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#include "cpp7.cpp"
+#include "extern_use.cpp"
 
 using namespace std;
 int pqr;//global variable

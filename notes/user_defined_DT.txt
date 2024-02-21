@@ -1,0 +1,20 @@
+structure - can defined various data members with different datatype and use by creating object
+union - same as structure but functionality different
+        all the data members are stored at same physical location
+        size of union is the size of the largest datatype present in its members
+        modifying one value of the member will result in change in the value of all data members since they share same physical memory.
+Enumeration - same declaration,
+              we can assign values to variable names, i.e no type is declared,
+              only names have some values
+              by default,if values not assigned it takes from (0,1,2...)
+              or if assign to any one name then it will add one to next ones
+
+    example - 
+            enum months{
+                Jan=1,Feb,Mar,Apr,May,June,July,Aug,Sep,Oct,Nov,Dec
+            }mnt;
+
+            we can get values like using Jan(other variables); anywhere in the program
+
+
+            
