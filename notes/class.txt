@@ -1,0 +1,27 @@
+Classes- same like structures but class can have function as members.
+
+Access Specifier
+private members of a class are accessible only from within other members of the same class (or from their "friends").
+protected members are accessible from other members of the same class (or from their "friends"), but also from members of their derived classes.
+Finally, public members are accessible from anywhere where the object is visible.
+
+Constructor - 
+function with same name as class_name with no return type, it is only used to initialize the class
+data members
+
+we can also overload constructors(same as function overload) change in parameters
+
+when we define a constructor with no parameters it is also known as default constructor since it will be initialized when no values/parameters are given.
+
+'this' pointer(keyword) - it is a pointer that points to the object whose member function is being executed.
+it is used within the class member function to refer to the object itself
+
+
+Static data members ,
+same as static variables , it is like a non member variable but have class scope,for that we cant initialize them 
+in the class (code example in class.cpp)
+
+Const keyword use in object creation-
+const class_name object;
+
+this allows the object (data members) read only that is we cant modify any data members.

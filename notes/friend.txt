@@ -1,0 +1,16 @@
+friends are functions or classes , keyword - friend
+Non-member functions can access private and protected members of a class if it is declared as a friend of that class.
+preceding with 'friend' to any function or class
+
+friend needs to be defined in class declaration and the function we declare a friend of the class is not
+a member of that class, it only allows access to private and protected member without being a member.
+
+similarly we have friend class also which is a friend of some class and it allows to access the data members of the class.
+
+class Rectangle{
+    ...
+};
+class Square{
+    friend class Rectangle;
+    ...
+}

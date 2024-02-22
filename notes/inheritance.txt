@@ -1,0 +1,50 @@
+We can create new classes extending , i.e retaining the characteristics of the base class.
+This process is inheritance,it involves base class and derived class
+
+derived class inherits the members of base class and also can define its own members also.
+derived classes can access the protected members of base class but not private members.
+
+class derived_class:public base_class{
+    ...
+};
+access specifier can be anything public,private,protected
+This access specifier limits the most accessible level for the members inherited 
+from the base class: The members with a more accessible level are inherited with 
+this level instead, while the members with an equal or more restrictive access 
+level keep their restrictive level in the derived class.
+
+
+Since public is the most accessible level, by specifying this keyword the derived 
+class will inherit all the members with the same levels they had in the base class.
+With protected, all public members of the base class are inherited as protected in the derived class. 
+Conversely, if the most restricting access level is specified (private), all the base class 
+members are inherited as private.
+
+
+Access	                    public	protected	private
+members of the same class	yes	    yes     	yes
+members of derived class	yes	    yes	        no
+not members	                yes	    no      	no
+
+
+
+a publicly derived class inherits every member of base class except:
+constructor destructor
+assignment operator members
+friends
+private members
+
+MULTIPLE INHERITANCE-
+To inherit data members from multiple classes , mention in base_class 
+separated by comma with each access specifier for it.
+
+
+POLYMORPHISM - 
+One of the key features of class inheritance is that a pointer to a derived class is 
+type-compatible with a pointer to its base class.
+Polymorphism is the art of taking advantage of this simple but powerful and versatile feature.
+
+A virtual member is a member function that can be redefined in a derived 
+class, while preserving its calling properties through references.
+
+

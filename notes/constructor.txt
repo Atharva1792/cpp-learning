@@ -1,0 +1,53 @@
+Constructor is used to initialize the data members when a object is to be created.
+defined by class name only and no return type,only for the purpose of initialization
+
+default constructor-
+When a constructor is not defined,
+the compiler assumes that the class has a default constructor and objects can be created without any arguments.
+
+but when we define a constructor explicitly(any number of parameters) then compiler dont provide an 
+implicitly default constructor and we cant create object without arguments.
+
+Destructor - opposite functionality of constructor,
+responsible for clean needed by a class when its lifetime ends.
+needed when we dynamically allocate memory to classes.
+called at the end of the main function (after the last statements are executed)
+
+Copy Constructor-
+copy constructor is that constructor which has its first parameter as reference of class itself.
+when there is no such copy constructor or any other custom constructor,the compiler has implicitly defined
+a copy constructor which simply performs a copy of its own members.
+It performs a shallow copy that is copy the data members,
+equivalent to 
+
+MyClass::MyClass(const MyClass& x) : a(x.a), b(x.b), c(x.c) {}
+
+for class - 
+class MyClass {
+  public:
+    int a, b; string c;
+};
+
+shallow copy only copies the member of class but when we use pointers as data members then 
+shallow copy only copies the value of pointer and not the content that is the original and copy pointer both
+points to same object and at destruction(end point) they both will try to delete the same block 
+of memory which will result in program crash on runtime.
+this is solved by performing a deep copy
+in this we will create a new allocation for object which is initialized to copy of the original object.
+this way they both will be stored at different locations.
+
+Copy can be done using assignment (=) also
+it is operator overload of (=) that takes the reference to the class itself as parameter
+implicitly defined if not explicitly defined but same problem of shallow copy
+
+Move constructor and assignment-
+similar to copying but the content is transferred from one object to the other
+the sources lose the content to the destination
+this happens when the source of an object is unnamed object
+they take parameter as rvalue reference to the class itself
+it is used - followed by type and (&&)
+Myclass (MyClass&&); move constructor
+Myclass& operator =(MyClass&&)
+
+Copying - (A to B) means new memory allocated to B and the entire content of A is copied to B 
+Moving - (A to B) means no new memory is allocated, all the content is transferred from A to B,
