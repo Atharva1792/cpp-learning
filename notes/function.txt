@@ -55,16 +55,31 @@ to declare ,same as defining ,just end with a semicolon(;)
 
 FUNCTION OVERLOADING--
 
+Compile time Polymorphism is known as overloading
 Overloaded Functions - Two functions with same name
 Two functions can have same name as long as there is difference in their parameters
 no. of parameter can be different
 or the type of parameter can be different
 If there are any changes in parameter for 2 same function name then they are overloaded functions
+the function is called by matching the type and parameters hence its information is available at compile time
+and so the compiler selects the appropriate function.
+It is faster as info is known at compile time
 
 int add(int a,int b){return a+b;};
 double add(double a,double b){return a+b;};  example of overloaded function
 functionality could be same or different also.
 but the parameter type should be different
+
+FUNCTION OVERRIDING --
+If derived class defines same function as defined in base class.
+In this way We can have more specific implementation of the function for the derived class
+parameters are also same,no change,
+It is run-time Polymorphism because it looks for the function while run time 
+It is achieved with the use of virtual functions and pointer.
+run time Polymorphism is known as overriding.
+It is at run time since all the functions have same parameters and type,so on run time
+it executes the one from the object that is calling it.
+It is slower execution.
 
 Function template--
 we can define function with generic type and when we call them we can initiate the function with the 

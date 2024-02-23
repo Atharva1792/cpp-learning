@@ -1,0 +1,15 @@
+Abstraction in C++ is the process to hide the internal details and showing functionality only. 
+i.e representing only the essential details in the program.
+
+Abstraction can be achieved by two ways:
+Abstract class
+Interface
+
+Abstract class and interface both can have abstract methods which are necessary for abstraction.
+
+abstract class can be defined by defining atleast one pure virtual function.
+
+It can be achieved in two ways :
+using classes - using access specifier we can define which data members and functions to show or give access .
+using header file - we dont how the standard library functions are implemented,we only use the functions of it,
+hence we can say that the header files hides all the implementation details from user.

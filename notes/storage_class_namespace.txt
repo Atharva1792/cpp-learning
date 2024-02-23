@@ -26,3 +26,25 @@ also automatic storage is generated for local variables (within block code) only
 static storage variable that are not initialized are automatically initialized to zero.
 whereas automatic storage variable(local) that are not initialized are left uninitialized 
 and give random value(undetermined value)
+
+Storage class - 
+is used to define lifetime(variable remains active) and 
+visibility(variable accessible in function) of a variable
+
+automatic ()
+Storage Class	Keyword	    Lifetime	    Visibility	Initial Value
+Automatic	    auto	    Function Block	Local	    Garbage
+Register	    register	Function Block	Local	    Garbage 
+Mutable	        mutable	    Class	        Local	    Garbage
+External	    extern	    Whole Program	Global	    Zero
+Static	        static	    Whole Program	Local	    Zero
+
+
+register stores in register rather than RAM(should be used when quick access)
+and also we cant get address of register variable
+
+The static variable is initialized only once and exists till the end of a 
+program. It retains its value between multiple functions call.
+
+The extern variable is visible to all the programs. It is used if two 
+or more files are sharing same variable or function.

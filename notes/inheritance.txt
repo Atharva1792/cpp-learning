@@ -38,6 +38,12 @@ MULTIPLE INHERITANCE-
 To inherit data members from multiple classes , mention in base_class 
 separated by comma with each access specifier for it.
 
+MULTILEVEL INHERITANCE-
+When a derived class is derived from another derived class.(A->B->C)
+
+HIERARCHIAL - When there are multiple derived classes from one base class
+
+HYBRID - When inheritance is done by combining more than one inheritance type
 
 POLYMORPHISM - 
 One of the key features of class inheritance is that a pointer to a derived class is 
@@ -47,4 +53,26 @@ Polymorphism is the art of taking advantage of this simple but powerful and vers
 A virtual member is a member function that can be redefined in a derived 
 class, while preserving its calling properties through references.
 
+A class that declares or inherits the virtual function is called polymorphic class.
+virtual function can be redefined in each derived class to perform the function defined in the class,
+if we remove virtual then the functions that we defined in derived class wont be called instead
+the function defined in base class i.e it will return 0 .
+
+We use pointers for Polymorphism
+
+Abstract base Class -
+They can only be used as base classes and thus are allowed to have virtual functions without definition,
+the syntax can be replaced by (=0) (also known as pure virtual function)i.e -
+virtual int area()=0;   //virtual function that can be redefined in the derived class
+
+Classes that atleast contain one pure virtual function are known as abstract base classes.
+
+Abstract class cannot be used to instantiate objects.
+i.e Polygon my_Polygon; //is invalid
+
+But we can use pointers of polygon class and then access the derived class using their objects.
+Polygon *ptr = &rect;   //rect object of rectangle class
+
+instead of creating a object of rectangle ,we can use dynamic memory i.e 
+Polygon *ptr = new Rectangle();
 

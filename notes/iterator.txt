@@ -1,0 +1,25 @@
+Iterator are just like pointers used to access the container elements.
+traverse from one element to another
+independent of the type of container used
+generic approach to navigate through the elements of container
+
+syntax - 
+<container_type>::iterator;
+
+Operations by iterators - 
+Operator (*) : The '*' operator returns the element of the current position pointed by the iterator.
+Operator (++) : The '++' operator increments the iterator by one. Therefore, an iterator points to the next element of the container.
+Operator (==) and Operator (!=) : Both these operators determine whether the two iterators point to the same position or not.
+Operator (=) : The '=' operator assigns the iterator.
+
+Iterators are smart pointers that allow to iterate through complex data structures.
+they have two basic member function - 
+begin(): The begin() function returns an iterator pointing to the first element of the container.
+end(): The end() function returns an iterator pointing to the past-the-last element of the container.
+
+Categorized into 5 types - 
+Input Iterator  -- only access ,cannot modify--(++,==,!=,*)
+Output Iterator -- write only(cant read/access) only modify,--(++,=)
+Forward Iterator-- read and write both --(++,=,==,!=)
+Bidirectional Iterator -- same as forward,only decrement added that is backward traverse--(++,--,=,==,!=)
+Random Access Iterator -- all features but allows random access and pointer addition subtraction

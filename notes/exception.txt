@@ -1,0 +1,24 @@
+Exceptions provide a way to react to exceptional circumstances (like runtime errors) 
+in programs by transferring control to special functions called handlers.
+
+An exception is thrown by using 'throw' keyword inside try block
+try block is the code that we want to try and 
+only when a exception is thrown it goes to catch block(handler)
+
+handler-
+catch block is the one that catches the exception that is we can have certain message/error 
+and catch block will allow us to compile the program and we will know that error has occurred.
+
+catch (parameter){}
+this parameter's type is important since the exception can be handled only if the type matches
+we can have multiple handlers also(catch blocks)
+containing different types of parameters
+catch(...) - it represents to catch any type of exception occurred
+             it can be used as default handler
+             ...(ellipsis)
+
+STANDARD EXCEPTION -
+C++ has standard library for exception (header file - <exception>)
+it has class exception specifically designed for throwing objects for exceptions.
+It has a special virtual member - 'what()',which can be redefined by inheriting the exception class
+that returns a char* return type.
