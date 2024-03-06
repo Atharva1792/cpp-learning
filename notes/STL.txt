@@ -1,0 +1,45 @@
+STL is standard template library in C++ .
+It has various template classes to provide general-purpose classes and functions for 
+handling common programming tasks for DSA.
+It includes containers(like vector,sets and maps), algorithms(sorting and searching)
+and iterators to manipulate these data structures efficiently.
+It optimizes code and also code reusability and reliability.
+
+Containers - 
+objects that hold the data of same type.
+used to implement different data structures.
+syntax - 
+Container <type> object_name;
+________________________________________________________________
+Container   |Description            |Header file| iterators     |
+____________|_______________________|___________|_______________|
+Vector      |Creates dynamic array  |<vector>   |Random Access  |
+            |                       |           |               |
+List        |sequence container     |<list>     |Bidirectional  |
+            |                       |           |               |
+deque       |double ended queue     |<deque>    |Random Access  |
+            |that allows insertion  |           |               |
+            |deletion from both end |           |               |
+            |                       |           |               |
+set         |associate container for|<set>      |Bidirectional  |
+            |storing unique sets    |           |               |
+            |                       |           |               |
+multiset    |storing non-unique sets|<set>      |Bidirectional  |
+            |                       |           |               |
+map         |associate container for|<map>      |Bidirectional  |
+            |storing unique key-    |           |               |
+            |value pairs(one-to-one)|           |               |
+            |                       |           |               |
+multimap    |key-value pairs but    |<map>      |Bidirectional  |
+            |each key can be        |           |               |
+            |associated with more   |           |               |
+            |than one value         |           |               |
+            |                       |           |               |
+stack       |LIFO(last in first out)|<stack>    |No iterator    |
+            |                       |           |               |
+queue       |FIFO                   |<queue>    |No iterator    |
+            |(first in first out)   |           |               |
+priority    |first element out is   |<queue>    |No iterator    |
+-queue      |always the highest     |           |               |
+            |priority element       |           |               |
+________________________________________________________________|
